@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "quotes": ["warn", "single"],
+    "semi": "error",
+    "no-cond-assign": ["error", "always"],
+    "eqeqeq": "warn",
+    "space-before-blocks": ["error", "always"],
+    "no-var": "error",
+    "camelcase": "error",
+    "react/jsx-wrap-multilines": "error",
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
+    "react/no-did-mount-set-state": "warn",
+    "react/no-did-update-set-state": "warn",
+    "react/no-direct-mutation-state": "error"
+  }
+}

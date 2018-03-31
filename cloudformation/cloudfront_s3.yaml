@@ -1,0 +1,89 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  Aliases:
+    Type: CommaDelimitedList
+  CacheTTL:
+    Type: Number
+    Default: 86400
+  OriginAccessIdentity:
+    Type: String
+    Default: E1XNAGEXFDV337
+
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref AWS::StackName
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Bucket
+      PolicyDocument:
+        Statement:
+          - Action:
+              - s3:GetObject
+            Effect: Allow
+            Resource: !Sub arn:aws:s3:::${AWS::StackName}/*
+            Principal:
+              AWS: !Sub arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity ${OriginAccessIdentity}
+  LoggingBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub ${AWS::StackName}-cloudfront-logs
+  CloudFront:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Aliases: !Ref Aliases
+        CacheBehaviors: []
+        Comment: !Ref AWS::StackName
+        CustomErrorResponses:
+          - ErrorCachingMinTTL: 300
+            ErrorCode: 403
+            ResponseCode: 200
+            ResponsePagePath: '/index.html'
+        DefaultCacheBehavior:
+          DefaultTTL: !Ref CacheTTL
+          ForwardedValues:
+            Cookies:
+              Forward: none
+            QueryString: true
+          TargetOriginId: DefaultOrigin
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: index.html
+        Enabled: true
+        Origins:
+          - Id: DefaultOrigin
+            DomainName: !Sub ${Bucket}.s3.amazonaws.com
+            S3OriginConfig:
+              OriginAccessIdentity: !Sub origin-access-identity/cloudfront/${OriginAccessIdentity}
+        Logging:
+          Bucket: !Sub ${LoggingBucket}.s3.amazonaws.com
+        PriceClass: PriceClass_100
+        ViewerCertificate:
+          AcmCertificateArn: arn:aws:acm:us-east-1:542281740756:certificate/57008482-2ce3-4cbe-9737-4fc88d02619a
+          SslSupportMethod: sni-only
+  StaticBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+      BucketName: !Sub ${AWS::StackName}-static
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: index.html
+  StaticBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref StaticBucket
+      PolicyDocument:
+        Statement:
+          - Action:
+              - s3:GetObject
+            Effect: Allow
+            Principal: '*'
+            Resource: !Sub arn:aws:s3:::${AWS::StackName}-static/*
+
+Outputs:
+  DomainName:
+    Value: !GetAtt CloudFront.DomainName
