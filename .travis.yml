@@ -1,0 +1,31 @@
+language: python
+python:
+  - 2.7
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - nvm install 8
+  - npm install
+
+script:
+  - npm run lint
+  - npm run build-css
+  - npm run test
+
+before_deploy:
+  - pip install awscli
+  - npm run build
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: npm run deploy -- --env $TRAVIS_BRANCH
+  on:
+    branch: master

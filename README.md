@@ -31,6 +31,12 @@ The build is minified and the filenames include the hashes.
 Deploys cloudformation changes to the production environment.
 The cloudformation template can be found in the `cloudformation` folder.
 
+This script uses the following arguments:
+
+- `--env`|`-e`: Environment name, defaults to `dev`
+- `--region`|`-r`: AWS region to deploy cloudformation into, defaults to `us-east-1`
+- `--profile`|`-p`: Configured awscli profile name to use
+
 ### `npm run lint`
 
 Runs eslint against JavaScript files in the `src` folder to enforce code standards.
