@@ -37,7 +37,7 @@ cfn({
   awsConfig: {
     region: region
   }
-}, __dirname + '/../cloudformation/cloudfront_s3.yaml')
+}, __dirname + '/cloudformation/cloudfront_s3.yaml')
 .then(function() {
   console.log('Stack has been deployed');
 });
