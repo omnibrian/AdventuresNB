@@ -1,3 +1,15 @@
+.AppBarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
 .TitleSpan {
   cursor: default;
+}
+
+body {
+  margin-top: 64px !important;
 }

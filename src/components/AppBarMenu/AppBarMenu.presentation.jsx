@@ -25,7 +25,7 @@ class AppBarMenu extends Component {
 
   render() {
     return (
-      <div>
+      <div className="AppBarContainer">
         <AppBar
           className="AppBar"
           title={<span className="TitleSpan">Adventures NB</span>}

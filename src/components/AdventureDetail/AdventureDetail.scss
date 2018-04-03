@@ -1,0 +1,38 @@
+.DetailPageContainer {
+  display: flex;
+}
+
+.AdventureDetailContainer {
+  padding-left: 380px;
+  width: 100%;
+}
+
+.Card {
+  margin: 10px;
+}
+
+.CardImage {
+  height: 350px;
+  max-height: 45vh;
+  object-fit: cover;
+  background-color: rgb(149, 143, 134);
+}
+
+.TagsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Tag {
+  margin: 0 4px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .AdventureListDrawer {
+    display: none;
+  }
+
+  .AdventureDetailContainer {
+    padding-left: 0;
+  }
+}

@@ -13,8 +13,7 @@ export default compose(
       <RefreshIndicator
         className="Loading"
         size={50}
-        left={0}
-        top={30}
+        top={100}
         loadingColor="#FF9800"
         status="loading" />
     ),
