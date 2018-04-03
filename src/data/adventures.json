@@ -1,0 +1,295 @@
+[
+  {
+    "description": "Beautiful waterfall on the Maliseet trail. Park on NB-165 and follow the Maliseet trail. After ~30 minutes take a right to get to the waterfall. The trail is usually quite muddy.",
+    "id": "hayes-falls",
+    "location": {
+      "latitude": 46.026349,
+      "longitude": -67.55551
+    },
+    "map": "https://www.google.com/maps/d/embed?mid=1iEJrYRrf2RnDnvp9jLGs1R6VZD9x4f2o",
+    "name": "Hayes Falls",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/HayesFalls1.jpg"
+    ],
+    "short_description": "Beautiful waterfall on Maliseet trail.",
+    "tags": [
+      "waterfall",
+      "easy",
+      "dog friendly"
+    ],
+    "time": 45,
+    "type": "one-way"
+  },
+  {
+    "description": "At 890 meters of elevation, Mount Carleton is the tallest mountain in New Brunswick. The park features many beautiful well maintained trails at different difficulty levels. The park also has camping sites, as well as a few waterfalls and swimming locations",
+    "elevation": 890,
+    "id": "mount-carleton",
+    "location": {
+      "latitude": 47.417485,
+      "longitude": -66.895082
+    },
+    "map": "https://www.google.com/maps/d/embed?mid=1khtAubHaPOquy0tgojnM1dVzO6rC1ykq",
+    "name": "Mount Carleton",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/MountCarleton1.jpg"
+    ],
+    "short_description": "Hikes to the mountain peak",
+    "tags": [
+      "swimming",
+      "dog friendly",
+      "mountain peak",
+      "medium",
+      "difficult",
+      "waterfalls",
+      "camping"
+    ],
+    "time": 210
+  },
+  {
+    "description": "Beautiful popular waterfall near tubing on the Nashwaak. Just after passing the bridge to get to Durham Bridge, there is a dirt road on the left. Park at the start of that dirt road and the trail starts from the parking area and continues along the creek until it reaches the falls. It usually takes about 25 minutes to reach the falls. There has however been recent erosion causing parts of the trail to collapse. The trail can also get wet and muddy in some sections. Swimming is possible at the base of the falls, but jumping is not recommended.",
+    "id": "dunbar-falls",
+    "length": 0.7,
+    "location": {
+      "latitude": 46.140505,
+      "longitude": -66.618675
+    },
+    "map": "https://www.google.com/maps/d/embed?mid=1UnLZTvrJ7tK4HCzeWAaoD8VVS4MS3WAD",
+    "name": "Dunbar Falls",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/DunbarFalls1.jpg"
+    ],
+    "short_description": "Short hike to a wide waterfall.",
+    "tags": [
+      "waterfall",
+      "moderate",
+      "dog friendly"
+    ],
+    "time": 30,
+    "type": "linear"
+  },
+  {
+    "description": "Gorgeous waterfall with great cliff jumping. From Adair's Wilderness lodge, drive south for 4.5km and take the second left onto Cross Road. After another 3.6km, keep left at the fork. The road will get rough but it's only another 900 meters to the parking. The trailhead will be on your right. Following this trail for 5-10 minutes will lead you to the waterfall. Climbing the trail to the right of the waterfall will get you to the top for cliff jumping.",
+    "id": "wallace-falls",
+    "length": 0.4,
+    "location": {
+      "latitude": 45.567477,
+      "longitude": -65.23339
+    },
+    "map": "https://www.google.com/maps/d/embed?mid=1NglxKqjOy7AJ7dhm82HWG5OpUDNZMxcR",
+    "name": "Wallace Falls",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/WallaceFalls1.jpg"
+    ],
+    "short_description": "Nice waterfall with cliff jumping",
+    "tags": [
+      "waterfall",
+      "cliff jumping",
+      "easy",
+      "swimming",
+      "dog friendly"
+    ],
+    "time": 10,
+    "type": "linear"
+  },
+  {
+    "description": "Park on the side of the highway (next to marker 250km) and follow the rocks downhill to the deer gate. Once going through the deer gate stay to the right and you'll reach the creek. To get a better view of the falls, it is recommended to descend on the right side of the creek. If the water is low enough you can try to cross the creek, however the safer way is the head back towards the highway and cross over the culvert. The terrain can be pretty steep getting down and the trail condition is not great so be careful.",
+    "id": "lower-joslin-falls",
+    "location": {
+      "latitude": 45.887839,
+      "longitude": -67.025385
+    },
+    "map": "https://www.google.com/maps/d/embed?mid=1_oXM0umo6651IerlCX5AgaFbrS8hamMK",
+    "name": "Lower Joslin Falls",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/LowerJoslinFalls1.jpg"
+    ],
+    "short_description": "Short hike to a big drop waterfall",
+    "tags": [
+      "medium",
+      "dog friendly",
+      "steep terrain"
+    ],
+    "time": 10
+  },
+  {
+    "description": "The Sugarloaf Bike Park was designed by Whistler's Gravity Logic and offers something great for everyone. Beginner trails include smooth, gentle cruises. Intermediate riders will enjoy twisty single tracks. Experts can find a challenge on tight, steep and rocky 'black diamond' trails. The trails are packed with burms, table tops, drops, step ups and wooden features.",
+    "elevation": 260,
+    "id": "sugarloaf-bike-park",
+    "location": {
+      "latitude": 47.981128,
+      "longitude": -66.693378
+    },
+    "name": "Sugarloaf Bike Park",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/Sugarloaf1.jpg"
+    ],
+    "short_description": "Downhill mountain biking",
+    "tags": [
+      "mountain",
+      "peak",
+      "biking",
+      "downhill"
+    ]
+  },
+  {
+    "description": "Great spot for a swim or some cliff jumping. This is an old quarry that is filled with spring water. The water is cold and very clear. The terrain is ery rough and rocky so watershoes are recommended. Heading south down the NB-695, take a left on E-Scotch Settlement Road. Take the second road on the left and you will arrive at the The Cuts. The larger of the two jumps is very dangerous and not recommended.",
+    "id": "cuts-quarry",
+    "location": {
+      "latitude": 45.741645,
+      "longitude": -65.838986
+    },
+    "map": "https://www.google.com/maps/d/embed?mid=1pUdG8_g1SnhZIgA5vK26bmWgJZ6_OKss",
+    "name": "The Cuts Quarry",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/TheCuts1.jpg"
+    ],
+    "short_description": "Cliff jumping in a quarry",
+    "tags": [
+      "cliff jumping",
+      "swimming"
+    ]
+  },
+  {
+    "description": "Crabbe Mountain is an alpine ski hill in Central Hainesville, near the intersection of Route 104 and Route 610. This is New Brunswick's highest vertical ski hill at 260 meters. It offers challening terrain for skiers of all abilities. Lift ticket and rental prices are available on their website: www.crabbemountain.com",
+    "elevation": 260,
+    "id": "crabbe-mountain",
+    "location": {
+      "latitude": 46.117238,
+      "longitude": -67.100683
+    },
+    "name": "Crabbe Mountain",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/CrabbeMountain1.jpg"
+    ],
+    "short_description": "Skiing and snowboarding",
+    "tags": [
+      "skiing",
+      "snowboarding",
+      "mountain",
+      "peak"
+    ]
+  },
+  {
+    "description": "Second Nature Outdoors offers boat rentals on the Saint John River throughout the summer. They have canoes, stand up paddle boards, and 1-2 person kayaks. There is a smaller river directly across the Saint John River from Second Nature Outdoors. This smaller river is beautiful and peaceful.",
+    "id": "second-nature-outdoors",
+    "location": {
+      "latitude": 45.965694,
+      "longitude": -66.652883
+    },
+    "name": "Second Nature Outdoors",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/SecondNatureOutdoors1.jpg"
+    ],
+    "short_description": "Kayaks, canoes, and paddle boards",
+    "tags": [
+      "easy"
+    ]
+  },
+  {
+    "description": "In Fundy National Park, after a 10 to 15 minute drive down a gravel road, the Laverty Falls trail starts off hiking through a nice canopy of trees and continues through the forest until it reaches the Laverty Falls waterfall which has a fun swimming area at the bottom.",
+    "id": "laverty-falls",
+    "location": {
+      "latitude": 45.675798,
+      "longitude": -65.010785
+    },
+    "name": "Laverty Falls",
+    "short_description": "Nice hike to a well-known waterfall in Fundy National Park.",
+    "tags": [
+      "waterfall",
+      "medium",
+      "fundy",
+      "maintained"
+    ]
+  },
+  {
+    "description": "This is known as the 'Grand Canyon' of New Brunswick. There is no internet after Adairs Wilderness Lodge, so be sure to download maps offline. The hike begins by following a four wheeler trail for a half hour to the lookout point. From here you can see the Walton Glen waterfall. It runs dry often so if you want to see running water on this waterfall be sure to go after a good rain. The hike then continues down into the gorge and then follows the river. This river conains a set of beautiful waterfalls. After another 2 hours or so, you'll reach the 'Eye of the Needle'. This is where the walls of the gorge become very narrow and you need to enter the water to continue on the trail. Another half hour later you'll reach an opening where the river meets the little Salmon River. This is a great spot to go for a swim. Another 45 minutes or so downstream and you'll reach the Fundy coast.",
+    "elevation": 187,
+    "id": "walton-glen-gorge",
+    "length": 4.6,
+    "location": {
+      "latitude": 45.496995,
+      "longitude": -65.31632
+    },
+    "map": "https://www.google.com/maps/d/embed?mid=10PXsuLcD3fhCye78-fHVxftgus4Lrswi",
+    "name": "Walton Glen Gorge",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/WaltonGlenGorge1.jpg",
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/WaltonGlenGorge2.jpg"
+    ],
+    "short_description": "Beautiful hike to the 'Grand Canyon of NB'",
+    "tags": [
+      "canyon",
+      "scenic",
+      "difficult",
+      "waterfall",
+      "swimming"
+    ],
+    "time": 270,
+    "type": "linear"
+  },
+  {
+    "description": "From Welsford, take NB-101. After driving under the highway, take your second left. Drive on this road for 1.3km. The trailhead is on the left. Follow this trail for 5-10 minutes and you'll get to the waterfall. Swimming is possible at this waterfall. The water gets much deeper on the left side at the bottom of the falls.",
+    "id": "welsford-falls",
+    "location": {
+      "latitude": 45.446493,
+      "longitude": -66.347958
+    },
+    "name": "Welsford Falls",
+    "short_description": "Large waterfall in Welsford",
+    "tags": [
+      "waterfall",
+      "steep terrain",
+      "swimming"
+    ]
+  },
+  {
+    "description": "Stewart's Tubing is in Littleton, East of Miramichi. Sit back and relax down the Miramichi river. There's also a rope swing at the end.",
+    "id": "stewarts-tubing",
+    "location": {
+      "latitude": 46.940066,
+      "longitude": -65.9109
+    },
+    "name": "Stewart's Tubing",
+    "short_description": "Relaxing in an inner tube on a river",
+    "tags": [
+      "swimming",
+      "tubing",
+      "dog friendly"
+    ]
+  },
+  {
+    "description": "Skydive Moncton is the only nationally certified drop zone in New Brunswick. They are located at 780 Falconer Rd, Notre-Dame, NB. Pricing is available on their website: www.skydivemoncton.com",
+    "id": "skydive-moncton",
+    "location": {
+      "latitude": 46.281787,
+      "longitude": -64.708173
+    },
+    "name": "Skydive Moncton",
+    "short_description": "Skydive in NB!",
+    "tags": [
+      "skydiving"
+    ]
+  },
+  {
+    "description": "A very short hike to a nice waterfall. Park on the side of the highway and stay on the right side of the stream. A few steps into the forest and you'll reach a fork. Keep a right at this fork. The trail opens up and the waterfall will be on your left. Keep going down the hill to get a great view of the falls from the bottom.",
+    "id": "garden-creek-falls",
+    "length": 0.1,
+    "location": {
+      "latitude": 45.937968,
+      "longitude": -66.720592
+    },
+    "map": "https://www.google.com/maps/d/embed?mid=1I709N0gkBFGQUxiYNAnhGog3m_cP9p9U",
+    "name": "Garden Creek Falls",
+    "photo_urls": [
+      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/GardenCreekFalls1.jpg"
+    ],
+    "short_description": "Short hike to waterfall",
+    "tags": [
+      "dog friendly",
+      "easy",
+      "waterfall"
+    ],
+    "time": 5,
+    "type": "linear"
+  }
+]

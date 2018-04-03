@@ -1,0 +1,20 @@
+.MapWrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
+.MapContainer {
+  flex-grow: 1;
+  height: calc(100vh - 64px);
+}
+
+.MapElement {
+  height: 100%;
+}
+
+.InfoWindowImage {
+  display: block;
+  margin: auto;
+  width: 200px;
+  cursor: pointer;
+}
