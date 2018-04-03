@@ -18,9 +18,9 @@ class AppBarMenu extends Component {
 
     if (history.location.pathname !== route) {
       history.push(route);
-    } else {
-      this.setState({ open: false });
     }
+
+    this.setState({ open: false });
   }
 
   render() {
@@ -40,6 +40,7 @@ class AppBarMenu extends Component {
             title={<span className="TitleSpan">Menu</span>}
             onLeftIconButtonClick={() => this.setState({ open: false })} />
           <MenuItem onClick={() => this.handleGoto('/dashboard')}>Map</MenuItem>
+          <MenuItem onClick={() => this.handleGoto('/adventures')}>Adventures</MenuItem>
         </Drawer>
       </div>
     );

@@ -1,0 +1,16 @@
+.AdventureListContainer {
+  top: inherit !important;
+  width: 380px !important;
+  z-index: 1 !important;
+  max-height: calc(100% - 64px);
+}
+
+.SearchDiv {
+  padding: 0px 15px;
+}
+
+@media only screen and (max-width: 760px) {
+  .AdventureListContainer {
+    width: 100% !important;
+  }
+}
