@@ -120,6 +120,12 @@ class AdventureDetail extends Component {
               </FacebookProvider>
             </center>
           </Card>
+          <div className="DisclaimerNotice">
+            <h6>
+              This website is for informational purposes only, the creators assume no responsibility
+              for any injuries while on any adventures.
+            </h6>
+          </div>
         </div>
       );
     } else {
