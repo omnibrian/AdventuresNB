@@ -21,9 +21,12 @@ describe('AppBarMenu Component', () => {
   );
 
   it('shows menu with menu items', () => {
-    expect(wrapper.find('MenuItem')).to.have.length(1);
+    expect(wrapper.find('MenuItem')).to.have.length(2);
 
     // first menu item is Map
     expect(wrapper.find('MenuItem').at(0)).to.contain.text('Map');
+
+    // second menu item is Adventures
+    expect(wrapper.find('MenuItem').at(1)).to.contain.text('Adventures');
   });
 });

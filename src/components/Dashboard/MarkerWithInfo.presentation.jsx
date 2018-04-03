@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import autobind from 'react-autobind';
 import { withRouter } from 'react-router-dom';
 import { Marker, InfoWindow } from 'react-google-maps';
@@ -84,5 +85,10 @@ class MarkerWithInfo extends Component {
     );
   }
 }
+
+MarkerWithInfo.propTypes = {
+  adventure: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
+};
 
 export default withRouter(MarkerWithInfo);

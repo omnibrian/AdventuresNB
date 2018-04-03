@@ -26,7 +26,7 @@ if (profile) {
   process.env.AWS_PROFILE = profile;
 }
 
-var urlPrefix = (environment === 'prod' || environment === 'master') ? '' : `${environment}-`
+var urlPrefix = (environment === 'prod' || environment === 'master') ? '' : `${environment}-`;
 
 // create or update stack
 cfn({

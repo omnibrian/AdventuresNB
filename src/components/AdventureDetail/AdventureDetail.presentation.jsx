@@ -4,7 +4,7 @@ import autobind from 'react-autobind';
 import FacebookProvider, { Comments } from 'react-facebook';
 import { Card, CardActions, CardMedia, CardText, CardTitle } from 'material-ui/Card';
 import { Chip, FlatButton } from 'material-ui';
-import { Directions } from 'material-ui-icons';
+import Directions from 'material-ui/svg-icons/maps/directions';
 import config from '../../config';
 import adventures from '../../data/adventures.json';
 import AdventureList from '../AdventureList/AdventureList.container';

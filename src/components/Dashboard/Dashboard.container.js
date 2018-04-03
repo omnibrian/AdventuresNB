@@ -8,12 +8,14 @@ import Dashboard from './Dashboard.presentation';
 
 export default compose(
   withProps({
-    googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${config.GOOGLE_MAPS_API_KEY}&v=3.exp&libraries=geometry,drawing,places`,
+    googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${config.GOOGLE_MAPS_API_KEY}&` +
+      'v=3.exp&libraries=geometry,drawing,places',
     loadingElement: (
       <RefreshIndicator
         className="Loading"
         size={50}
         top={100}
+        left={0}
         loadingColor="#FF9800"
         status="loading" />
     ),

@@ -1,6 +1,11 @@
 {
+  "plugins": [
+    "react"
+  ],
   "extends": [
-    "eslint:recommended"
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
   "rules": {
     "no-console": "warn",
@@ -11,11 +16,13 @@
     "eqeqeq": "warn",
     "space-before-blocks": ["error", "always"],
     "no-var": "error",
+    "max-len": ["error", 120],
     "camelcase": "error",
     "react/jsx-wrap-multilines": "error",
     "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
     "react/no-did-mount-set-state": "warn",
     "react/no-did-update-set-state": "warn",
-    "react/no-direct-mutation-state": "error"
+    "react/no-direct-mutation-state": "error",
+    "react/display-name": "error"
   }
 }

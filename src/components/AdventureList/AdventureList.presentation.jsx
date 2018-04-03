@@ -84,6 +84,7 @@ class AdventureList extends Component {
 
 AdventureList.propTypes = {
   adventures: PropTypes.array.isRequired,
+  defaultSearchText: PropTypes.string,
   history: PropTypes.object.isRequired
 };
 
