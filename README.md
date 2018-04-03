@@ -1,5 +1,7 @@
 # Adventures NB
 
+[![Build Status](https://travis-ci.org/brileb73/AdventuresNB.svg?branch=master)](https://travis-ci.org/brileb73/AdventuresNB)
+
 Written in ReactJS and based on create-react-app.
 
 ## Available Scripts
