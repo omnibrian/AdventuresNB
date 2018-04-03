@@ -31,7 +31,7 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  adventures: PropTypes.array
+  adventures: PropTypes.array.isRequired
 };
 
 export default Dashboard;

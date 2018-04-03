@@ -5,25 +5,22 @@ import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import chaiEnzyme from 'chai-enzyme';
 import { getMuiTheme, MuiThemeProvider } from 'material-ui/styles';
-import AppBarMenu from './AppBarMenu.presentation';
+import Dashboard from './Dashboard.container';
 
 configure({ adapter: new Adapter() });
 
 chai.use(chaiEnzyme());
 
-describe('PageNotFound Component', () => {
+describe('Dashboard Component', () => {
   const wrapper = mount(
     <MuiThemeProvider muiTheme={getMuiTheme()}>
       <MemoryRouter>
-        <AppBarMenu />
+        <Dashboard />
       </MemoryRouter>
     </MuiThemeProvider>
   );
 
-  it('shows menu with menu items', () => {
-    expect(wrapper.find('MenuItem')).to.have.length(1);
-
-    // first menu item is Map
-    expect(wrapper.find('MenuItem').at(0)).to.contain.text('Map');
+  it('shows a map', () => {
+    expect(wrapper.find('withScriptjs(withGoogleMap(withProps(Dashboard)))').exists()).to.equal(true);
   });
 });
