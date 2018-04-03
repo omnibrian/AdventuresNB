@@ -19,7 +19,7 @@ class AppBarMenu extends Component {
     if (history.location.pathname !== route) {
       history.push(route);
     } else {
-      this.handleClose();
+      this.setState({ open: false });
     }
   }
 
