@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { browserHistory } from 'react-router';
+import PropTypes from 'prop-types';
 import { FlatButton } from 'material-ui';
 import { Card, CardActions, CardTitle } from 'material-ui/Card';
-import './page-not-found.css';
+import './PageNotFound.css';
 
 class PageNotFound extends Component {
   render() {
+    const { history } = this.props;
+
     return (
       <div className="PageNotFoundCardBorders">
         <Card className="PageNotFoundCard">
@@ -16,12 +18,16 @@ class PageNotFound extends Component {
             <FlatButton
               label="Go Back"
               primary={true}
-              onClick={browserHistory.goBack} />
+              onClick={history.goBack} />
           </CardActions>
         </Card>
       </div>
     );
   }
 }
+
+PageNotFound.propTypes = {
+  history: PropTypes.object.isRequired
+};
 
 export default PageNotFound;
