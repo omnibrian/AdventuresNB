@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import autobind from 'react-autobind';
+import FacebookProvider, { Comments } from 'react-facebook';
 import { Card, CardActions, CardMedia, CardText, CardTitle } from 'material-ui/Card';
 import { Chip, FlatButton } from 'material-ui';
 import { Directions } from 'material-ui-icons';
@@ -17,6 +19,12 @@ class AdventureDetail extends Component {
     this.state = {
       errored: false
     };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.match.params.adventureId !== this.props.match.params.adventureId) {
+      this.setState({ errored: false });
+    }
   }
 
   minutesToTime(time) {
@@ -105,6 +113,13 @@ class AdventureDetail extends Component {
                   height="480" />
               </CardMedia>
             </Card>}
+          <Card className="Card FacebookCommentsCard" id="Comments">
+            <center>
+              <FacebookProvider appId={config.FACEBOOK_API_KEY}>
+                <Comments href={window.location.href} width="100%" />
+              </FacebookProvider>
+            </center>
+          </Card>
         </div>
       );
     } else {
@@ -129,5 +144,10 @@ class AdventureDetail extends Component {
     );
   }
 }
+
+AdventureDetail.propTypes = {
+  match: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
+};
 
 export default AdventureDetail;
