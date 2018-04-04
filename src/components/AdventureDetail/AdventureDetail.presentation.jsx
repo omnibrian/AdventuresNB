@@ -5,6 +5,7 @@ import FacebookProvider, { Comments } from 'react-facebook';
 import { Card, CardActions, CardMedia, CardText, CardTitle } from 'material-ui/Card';
 import { Chip, FlatButton } from 'material-ui';
 import Directions from 'material-ui/svg-icons/maps/directions';
+import SwipeableViews from 'react-swipeable-views';
 import config from '../../config';
 import adventures from '../../data/adventures.json';
 import AdventureList from '../AdventureList/AdventureList.container';
@@ -16,14 +17,34 @@ class AdventureDetail extends Component {
     super(props);
     autobind(this);
 
+    const adventure = adventures.filter((adventure) => (adventure.id === props.match.params.adventureId))[0];
+
     this.state = {
-      errored: false
+      adventure,
+      imageSlideIndex: 0,
+      numSlides: (adventure.photo_urls) ? adventure.photo_urls.length : 1
     };
+  }
+
+  componentDidMount() {
+    const { timerLength } = this.props;
+
+    setInterval(() => {
+      this.setState({
+        imageSlideIndex: (this.state.imageSlideIndex + 1) % this.state.numSlides
+      });
+    }, timerLength);
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.match.params.adventureId !== this.props.match.params.adventureId) {
-      this.setState({ errored: false });
+      const adventure = adventures.filter((adventure) => (adventure.id === nextProps.match.params.adventureId))[0];
+
+      this.setState({
+        adventure,
+        imageSlideIndex: 0,
+        numSlides: (adventure.photo_urls) ? adventure.photo_urls.length : 1
+      });
     }
   }
 
@@ -48,8 +69,10 @@ class AdventureDetail extends Component {
     );
   }
 
-  handleError() {
-    this.setState({ errored: true });
+  handleChange(value) {
+    this.setState({
+      imageSlideIndex: value
+    });
   }
 
   renderDetail(adventure) {
@@ -57,8 +80,8 @@ class AdventureDetail extends Component {
     let lng = '';
 
     if (adventure.name && adventure.short_description && adventure.description) {
-      const photoUrl = (adventure.photo_urls && adventure.photo_urls[0]) ?
-        adventure.photo_urls[0] : config.DEFAULT_ADVENTURE_IMAGE;
+      const photoUrls = (adventure.photo_urls && adventure.photo_urls[0]) ?
+        adventure.photo_urls : [config.DEFAULT_ADVENTURE_IMAGE];
 
       if (adventure.location) {
         lat = adventure.location.latitude;
@@ -73,13 +96,20 @@ class AdventureDetail extends Component {
                 <CardTitle
                   className="AdventureDetailCardOverlayTitle"
                   title={adventure.name}
-                  subtitle={adventure.short_description} />
-              } >
-              <img
-                className="CardImage AdventureDetailCardImage"
-                src={this.state.errored ? config.DEFAULT_ADVENTURE_IMAGE : photoUrl}
-                alt=""
-                onError={this.handleError} />
+                  subtitle={adventure.short_description} />} >
+              <SwipeableViews
+                className="SwipeableView"
+                index={this.state.imageSlideIndex}
+                onChange={this.handleChange}>
+                {photoUrls.map((photoUrl) => (
+                  <img
+                    key={photoUrl}
+                    className="CardImage AdventureDetailCardImage"
+                    src={photoUrl}
+                    alt=""
+                    onError={this.handleError} />
+                ))}
+              </SwipeableViews>
             </CardMedia>
             <CardText>{adventure.description}</CardText>
             {adventure.length &&
@@ -134,9 +164,7 @@ class AdventureDetail extends Component {
   }
 
   render() {
-    const { match } = this.props;
-
-    const adventure = adventures.filter((adventure) => (adventure.id === match.params.adventureId))[0];
+    const { adventure } = this.state;
 
     return (
       <div className="DetailPageContainer">
@@ -151,9 +179,14 @@ class AdventureDetail extends Component {
   }
 }
 
+AdventureDetail.defaultProps = {
+  timerLength: 5000
+};
+
 AdventureDetail.propTypes = {
+  history: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired
+  timerLength: PropTypes.number
 };
 
 export default AdventureDetail;

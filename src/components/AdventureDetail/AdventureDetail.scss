@@ -11,10 +11,17 @@
   margin: 10px;
 }
 
-.CardImage {
+.SwipeableView {
   height: 350px;
   max-height: 45vh;
   object-fit: cover;
+  background-color: rgb(149, 143, 134);
+}
+
+.CardImage {
+  width: 100%;
+  object-fit: cover;
+  max-height: 45vh;
   background-color: rgb(149, 143, 134);
 }
 
