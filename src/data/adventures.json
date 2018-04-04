@@ -9,7 +9,7 @@
     "map": "https://www.google.com/maps/d/embed?mid=1iEJrYRrf2RnDnvp9jLGs1R6VZD9x4f2o",
     "name": "Hayes Falls",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/HayesFalls1.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/HayesFalls1-min.jpg"
     ],
     "short_description": "Beautiful waterfall on Maliseet trail.",
     "tags": [
@@ -31,7 +31,7 @@
     "map": "https://www.google.com/maps/d/embed?mid=1khtAubHaPOquy0tgojnM1dVzO6rC1ykq",
     "name": "Mount Carleton",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/MountCarleton1.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/MountCarleton1-min.jpg"
     ],
     "short_description": "Hikes to the mountain peak",
     "tags": [
@@ -56,7 +56,7 @@
     "map": "https://www.google.com/maps/d/embed?mid=1UnLZTvrJ7tK4HCzeWAaoD8VVS4MS3WAD",
     "name": "Dunbar Falls",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/DunbarFalls1.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/DunbarFalls1-min.jpg"
     ],
     "short_description": "Short hike to a wide waterfall.",
     "tags": [
@@ -78,7 +78,7 @@
     "map": "https://www.google.com/maps/d/embed?mid=1NglxKqjOy7AJ7dhm82HWG5OpUDNZMxcR",
     "name": "Wallace Falls",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/WallaceFalls1.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/WallaceFalls1-min.jpg"
     ],
     "short_description": "Nice waterfall with cliff jumping",
     "tags": [
@@ -101,7 +101,7 @@
     "map": "https://www.google.com/maps/d/embed?mid=1_oXM0umo6651IerlCX5AgaFbrS8hamMK",
     "name": "Lower Joslin Falls",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/LowerJoslinFalls1.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/LowerJoslinFalls1-min.jpg"
     ],
     "short_description": "Short hike to a big drop waterfall",
     "tags": [
@@ -121,7 +121,7 @@
     },
     "name": "Sugarloaf Bike Park",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/Sugarloaf1.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/Sugarloaf1-min.jpg"
     ],
     "short_description": "Downhill mountain biking",
     "tags": [
@@ -141,7 +141,7 @@
     "map": "https://www.google.com/maps/d/embed?mid=1pUdG8_g1SnhZIgA5vK26bmWgJZ6_OKss",
     "name": "The Cuts Quarry",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/TheCuts1.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/TheCuts1-min.jpg"
     ],
     "short_description": "Cliff jumping in a quarry",
     "tags": [
@@ -159,7 +159,9 @@
     },
     "name": "Crabbe Mountain",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/CrabbeMountain1.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/CrabbeMountain1-min.jpg",
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/CrabbeMountain2-min.jpg",
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/CrabbeMountain3-min.jpg"
     ],
     "short_description": "Skiing and snowboarding",
     "tags": [
@@ -178,7 +180,7 @@
     },
     "name": "Second Nature Outdoors",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/SecondNatureOutdoors1.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/SecondNatureOutdoors1-min.jpg"
     ],
     "short_description": "Kayaks, canoes, and paddle boards",
     "tags": [
@@ -213,8 +215,9 @@
     "map": "https://www.google.com/maps/d/embed?mid=10PXsuLcD3fhCye78-fHVxftgus4Lrswi",
     "name": "Walton Glen Gorge",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/WaltonGlenGorge1.jpg",
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/WaltonGlenGorge2.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/WaltonGlenGorge1-min.jpg",
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/WaltonGlenGorge2-min.jpg",
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/WaltonGlenGorge3-min.jpg"
     ],
     "short_description": "Beautiful hike to the 'Grand Canyon of NB'",
     "tags": [
@@ -281,9 +284,9 @@
     "map": "https://www.google.com/maps/d/embed?mid=1I709N0gkBFGQUxiYNAnhGog3m_cP9p9U",
     "name": "Garden Creek Falls",
     "photo_urls": [
-      "https://s3.amazonaws.com/bshd-frontend-prod-static/AdventureImages/GardenCreekFalls1.jpg"
+      "https://s3.amazonaws.com/adventuresnb-prod-static/AdventureImages/GardenCreekFalls1-min.jpg"
     ],
-    "short_description": "Short hike to waterfall",
+    "short_description": "Short hike to a waterfall",
     "tags": [
       "dog friendly",
       "easy",
