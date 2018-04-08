@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import autobind from 'react-autobind';
-import { Divider, Drawer, List, ListItem, TextField } from 'material-ui';
+import { Divider, Drawer, List, ListItem, TextField, Slider } from 'material-ui';
+import geolib from 'geolib';
 import './AdventureList.css';
 
 class AdventureList extends Component {
@@ -10,7 +11,8 @@ class AdventureList extends Component {
     autobind(this);
 
     this.state = {
-      searchText: this.props.defaultSearchText || ''
+      searchText: this.props.defaultSearchText || '',
+      distanceFilter: 420
     };
   }
 
@@ -34,8 +36,17 @@ class AdventureList extends Component {
         adventure.tags.reduce((acc, next) => acc || next.toLowerCase().includes(searchText), false)));
   }
 
+  compareDistance(adventure) {
+    return(
+      this.state.distanceFilter*1000 > geolib.getDistance(
+        {latitude: 45.982883, longitude: -66.660724}, //Enter user's location here
+        {latitude: adventure.location.latitude, longitude: adventure.location.longitude})
+    );
+  }
+
   renderList(adventures) {
-    const searchedAdventures = adventures.filter((adventure) => this.compareSearch(adventure));
+    const searchedAdventures = adventures.filter((adventure) => this.compareSearch(adventure)).filter(
+      (adventure) => this.compareDistance(adventure));
 
     if (searchedAdventures.length > 0) {
       return (
@@ -62,6 +73,10 @@ class AdventureList extends Component {
     }
   }
 
+  handleDistanceSlider = (event, value) => {
+    this.setState({distanceFilter: value});
+  };
+
   render() {
     const { adventures } = this.props;
 
@@ -76,6 +91,13 @@ class AdventureList extends Component {
             fullWidth={true}
             onChange={this.handleSearchChange} />
         </div>
+        <h4>Distance: {this.state.distanceFilter.toFixed(0)}km</h4>
+        <Slider
+          max={420}
+          onChange={this.handleDistanceSlider}
+          className="DistanceSlider"
+          defaultValue={this.state.distanceFilter}
+        />
         {this.renderList(adventures)}
       </Drawer>
     );
