@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { GoogleMap } from 'react-google-maps';
 import MarkerWithInfo from './MarkerWithInfo.presentation';
+import AdventureList from '../AdventureList/AdventureList.container';
 import './Dashboard.css';
 
 class Dashboard extends Component {
@@ -9,22 +10,28 @@ class Dashboard extends Component {
     const { adventures } = this.props;
 
     return (
-      <div className="MapWrapper">
-        <GoogleMap
-          defaultZoom={7}
-          defaultCenter={{ lat: 46.542009, lng: -66.234974 }} >
-          {adventures.map((adventure) => {
-            let location = adventure.location;
+      <div className="PageWrapper">
+        <div className="AdventureListDrawer">
+          <AdventureList {...this.props} />
+        </div>
 
-            if (location && location.latitude && location.longitude) {
-              return (
-                <MarkerWithInfo
-                  key={adventure.id}
-                  adventure={adventure} />
-              );
-            }
-          })}
-        </GoogleMap>
+        <div className="MapWrapper">
+          <GoogleMap
+            defaultZoom={7}
+            defaultCenter={{ lat: 46.542009, lng: -66.234974 }} >
+            {adventures.map((adventure) => {
+              let location = adventure.location;
+
+              if (location && location.latitude && location.longitude) {
+                return (
+                  <MarkerWithInfo
+                    key={adventure.id}
+                    adventure={adventure} />
+                );
+              }
+            })}
+          </GoogleMap>
+        </div>
       </div>
     );
   }
