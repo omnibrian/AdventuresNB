@@ -1,15 +1,25 @@
 .MapWrapper {
   display: flex;
-  flex-grow: 1;
+
 }
 
-.MapContainer {
-  flex-grow: 1;
-  height: calc(100vh - 64px);
+.PageWrapper {
+   display: flex;
+}
+
+.AdventureListDrawer {
+  margin-top: calc(-100vh + 60px);
+  padding-top: 0;
+  padding-left: 0;
+}
+
+ .MapContainer {
+   display: block;
+   padding-left: 380px;
 }
 
 .MapElement {
-  height: 100%;
+  height: calc(100vh - 60px);
 }
 
 .InfoWindowImage {
@@ -22,4 +32,13 @@
 .Loading {
   padding-top: 100px !important;
   margin: auto !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .AdventureListDrawer {
+    display: none;
+  }
+  .MapContainer {
+    padding-left: 0;
+  }
 }
