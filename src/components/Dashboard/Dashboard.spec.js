@@ -15,12 +15,16 @@ describe('Dashboard Component', () => {
   const wrapper = mount(
     <MuiThemeProvider muiTheme={getMuiTheme()}>
       <MemoryRouter>
-        <Dashboard />
+        <Dashboard history={{}} />
       </MemoryRouter>
     </MuiThemeProvider>
   );
 
   it('shows a map', () => {
-    expect(wrapper.find('withScriptjs(withGoogleMap(withProps(Dashboard)))').exists()).to.equal(true);
+    expect(wrapper.find('withProps(withScriptjs(withGoogleMap(MapView)))').exists()).to.equal(true);
+  });
+
+  it('shows adventure list', () => {
+    expect(wrapper.find('withProps(AdventureList)'));
   });
 });
