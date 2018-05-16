@@ -25,6 +25,6 @@ describe('Dashboard Component', () => {
   });
 
   it('shows adventure list', () => {
-    expect(wrapper.find('withProps(AdventureList)'));
+    expect(wrapper.find('withProps(AdventureList)').exists()).to.equal(true);
   });
 });
