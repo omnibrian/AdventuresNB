@@ -5,6 +5,14 @@ import MapView from './MapView.container';
 import './Dashboard.css';
 
 class Dashboard extends Component {
+
+  constructor() {
+    super();
+    this.state={
+      userLocation: {}
+    };
+  }
+
   render() {
     return (
       <div className="PageWrapper">
