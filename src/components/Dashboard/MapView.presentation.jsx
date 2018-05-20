@@ -10,12 +10,12 @@ class MapView extends Component {
 
     const currentLocationIcon = {
       path: 'M-6,0a6,6 0 6,0 12,0a6,6 0 1,0 -12,0',
-      fillColor: '#137ed9',
+      fillColor: '#4285f4',
       fillOpacity: 1,
       scale: 1,
-      strokeColor: '#ffffff',
-      strokeWeight: 1,
-      strokeOpacity: 1
+      strokeColor: '#4285f4',
+      strokeWeight: 11,
+      strokeOpacity: 0.2
     };
 
     return (
@@ -36,7 +36,6 @@ class MapView extends Component {
                     }}
                     icon= {currentLocationIcon}
                   />
-                  && this.setState({userLocation: {lat: this.props.coords.latitude, lng: this.props.coord.longitude}})
                   : <div />
             }
 
