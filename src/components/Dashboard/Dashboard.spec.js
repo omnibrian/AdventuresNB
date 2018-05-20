@@ -20,8 +20,8 @@ describe('Dashboard Component', () => {
     </MuiThemeProvider>
   );
 
-  it('shows a map', () => {
-    expect(wrapper.find('withProps(withScriptjs(withGoogleMap(MapView)))').exists()).to.equal(true);
+  it('shows a map wrapped by geolocated', () => {
+    expect(wrapper.find('withProps(withScriptjs(withGoogleMap(Geolocated(MapView))))').exists()).to.equal(true);
   });
 
   it('shows adventure list', () => {
